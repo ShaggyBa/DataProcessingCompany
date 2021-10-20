@@ -1,0 +1,173 @@
+// zeroing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url(../fonts/Gilroy-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Semibold';
+    src: url(../fonts/Gilroy-SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url(../fonts/Gilroy-Regular.woff) format('woff');
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    font-family: 'Gilroy-Semibold';
+}
+
+img {
+    vertical-align: top;
+}
+
+//! variables
+$T1:(#8476AA);
+$T2:(#99EFD0);
+$Base:(#F2994A);
+
+// styles
+h1,
+h2 {
+    font-family: 'Inter', sans-serif;
+    color: $T2;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 50px / 44px * 100%;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: inherit;
+    border: 1px solid $Base;
+    color: $Base;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px/12px*100%;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s linear;
+
+    &:hover {
+        background-color: $Base;
+        color: #fff;
+
+    }
+}
+
+.active {
+    background-color: $Base;
+    color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    min-height: 100%;
+    background: linear-gradient(to bottom, #3B1D60, #040D3E);
+    display: flex;
+    flex-direction: column;
+}
+
+.__container {
+    width: 100%;
+    height: auto;
+    padding: 0 170px;
+}
+
+.header {
+    padding-top: 75px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+
+    .nav {
+        margin-left: 44px;
+        display: flex;
+        flex: 0 1 100%;
+    }
+
+    .header__icon {
+        margin-top: 5px;
+    }
+}
+
+.nav__item {
+    padding-left: 20px;
+
+    &:first-child {
+        padding: 0px;
+    }
+}
+
+.link__text {
+    font-size: 12px;
+    line-height: 20px / 12px * 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b5b5b5;
+    transition: color .15s linear;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.header__buttons {
+    display: flex;
+
+    .button {
+        width: 112px;
+        height: 36px;
+
+        &:last-child {
+            margin-left: 20px;
+        }
+    }
+}
+
+.about {
+    padding-top: 135px;
+}
+
+.about__container {
+    display: flex;
+    width: 100%;
+}
+
+.about__content {
+    min-width: 50%;
+}
+
+.about__img  {
+    img {        
+    }
+}
