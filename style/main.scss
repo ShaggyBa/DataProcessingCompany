@@ -106,6 +106,7 @@ h1 {
 	width: 100%;
 	height: auto;
 	padding: 0 170px;
+    margin: 0 auto;
 }
 
 .header {
@@ -119,7 +120,7 @@ h1 {
 	.nav {
 		margin-left: 44px;
 		display: flex;
-		flex: 0 1 100%;
+		flex: 1 1 auto;
 	}
 
 	.header__icon {
@@ -157,13 +158,15 @@ h1 {
 }
 
 .about__container {
+    padding: 0 0 0 170px;
 	display: flex;
 	width: 100%;
 }
 
 .about__content {
 	padding-top: 135px - 104.15px;
-	max-width: 439px/1100px * 100%;
+    max-width: 40%;
+    min-width: 504px/1100px*100%;
 	p {
 		color: $T1;
 		font-size: 18px;
@@ -173,11 +176,11 @@ h1 {
 }
 
 .about__img {
-	flex: 0 1 100%;
+    flex: 0 1 60%;
 	margin-left: 35px;
 	img {
-		width: 100%;
-		height: auto;
+        width: 100%;
+        height: auto;
 	}
 }
 
@@ -201,7 +204,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 140px;
+	min-width: 140px;
 	height: 80px;
 	background-color: #361c5d;
 	border-radius: 4px;
@@ -209,9 +212,13 @@ h1 {
 
 .video__text {
 	margin-left: 20px;
+ 
 	max-width: 380px/540px * 100%;
 	p {
 		padding: 0;
+        font-size: 16px;
+        font-family: 'Rubik';
+        font-weight: 400;
 	}
 
 	a {
@@ -224,4 +231,24 @@ h1 {
 			color: #fff;
 		}
 	}
+}
+
+.parthers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.parthers__row {
+    max-width: 1100px;
+    padding: 0 63px;
+    display: flex;
+    width: 100%;
+    .parthers__item {
+        opacity: .2;
+
+        &:not(:first-child) {
+            margin-left: 74px;
+        }
+    }
 }
